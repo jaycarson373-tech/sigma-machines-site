@@ -17,6 +17,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Check out website files
+        uses: actions/checkout@v6
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload public website
